@@ -1,5 +1,40 @@
 import streamlit as st
 
+st.markdown(
+    """
+    <style>
+    /* Make the app background a premium deep slate/navy instead of plain gray */
+    .stApp {
+        background-color: #0F172A;
+    }
+    
+    /* Make the main title a beautiful, vibrant gradient */
+    h1 {
+        font-weight: 800 !important;
+        background: linear-gradient(135deg, #38BDF8, #34D399) !important;
+        -webkit-background-clip: text !important;
+        -webkit-text-fill-color: transparent !important;
+        font-size: 3rem !important;
+        padding-bottom: 1rem !important;
+    }
+    
+    /* Style subheaders to be clean and crisp */
+    h2, h3 {
+        color: #E2E8F0 !important;
+        font-weight: 600 !important;
+    }
+    
+    /* Style normal paragraph text to be soft and readable */
+    p {
+        color: #94A3B8 !important;
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # 1. Page Configuration
 st.set_page_config(page_title="WorldSwap Hub", page_icon="🌍")
 
@@ -17,6 +52,12 @@ if page == "Home Dashboard":
     
     st.subheader("Current Hub Status")
     st.text("📊 Active Databases: 3 Global Regions")
+    st.subheader("Current Hub Status")
+
+# This creates a beautifully boxed, high-end dashboard element
+col1, col2 = st.columns([1, 2])
+with col1:
+    st.metric(label="Global Regions", value="3 Active", delta="✓ Live")
 
 # 4. PAGE 2: CULTURAL EXPLORER
 if page == "Cultural Explorer":
