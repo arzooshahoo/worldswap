@@ -17,7 +17,6 @@ if page == "Home Dashboard":
     
     st.subheader("Current Hub Status")
     st.text("📊 Active Databases: 3 Global Regions")
-    st.text("🔒 Platform Cost: $0.00 (Fully Accessible)")
 
 # 4. PAGE 2: CULTURAL EXPLORER
 if page == "Cultural Explorer":
